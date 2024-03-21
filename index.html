@@ -15,13 +15,13 @@
             <h1>Encriptador de mensajes</h1>
             <textarea id="inputText" placeholder="Introduce tu mensaje aquí"></textarea>
             <div class="buttons">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button onclick="encrypt()">Encriptar</button>
+                <button onclick="decrypt()">Desencriptar</button>
             </div>
         </div>
         <div class="result-panel">
             <div id="outputText" class="output"></div>
-            <button>Copiar al portapapeles</button>
+            <button onclick="copyToClipboard()">Copiar al portapapeles</button>
         </div>
     </div>
     <script src="scripts.js"></script>
