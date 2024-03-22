@@ -2,28 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de mensajes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Mensajes</title>
 </head>
 <body>
-    
-    <div class="caja">
-        <div class="data-panel">
-            <h1>Encriptador de mensajes</h1>
-            <textarea id="inputText" placeholder="Introduce tu mensaje aquí"></textarea>
-            <div class="buttons">
-                <button onclick="encrypt()">Encriptar</button>
-                <button onclick="decrypt()">Desencriptar</button>
+    <header>
+        <img class="logo" src="images/Logo.png" alt="Logo">
+    </header>
+    <main>
+        <section class="data-panel">
+        <!--
+            <h2>Panel de Datos</h2>
+        -->
+            <textarea id="input-text"cols="30" rows="10" placeholder="Ingrese su mensaje aquí..."></textarea>
+            <div>
+                <h6 class="note">Solo letras minúsculas y sin acentos ni caracteres especiales.</h6>
             </div>
-        </div>
-        <div class="result-panel">
-            <div id="outputText" class="output"></div>
-            <button onclick="copyToClipboard()">Copiar al portapapeles</button>
-        </div>
-    </div>
+            <div class="buttons">
+                <button class="btn-encrypt" onclick="encrypt()">Encriptar</button>
+                <button class="btn-decrypt" onclick="decrypt()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="result-panel">
+            <textarea id="mensaje" cols="20" rows="10"></textarea>
+            <button class="btn-copiar" onclick="copyToClipboard()">Copiar</button>
+            
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Frank G</p>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
